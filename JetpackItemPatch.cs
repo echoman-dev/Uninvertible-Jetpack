@@ -11,5 +11,13 @@ namespace Uninvertible_Jetpack
         {
             __instance.isBeingUsed = false;
         }
+
+        [HarmonyPrefix]
+        [HarmonyPatch(nameof(JetpackItem.ItemActivate))]
+        public static void ItemActivate(ref JetpackItem __instance, bool __0, bool __1, ref bool ___jetpackActivatedPreviousFrame)
+        {
+            __instance.isBeingUsed = __1;
+            ___jetpackActivatedPreviousFrame = ~(__0&__1);
+        }
     }
 }

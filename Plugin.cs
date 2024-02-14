@@ -11,7 +11,7 @@ namespace Uninvertible_Jetpack
     {
         private const string modGUID = "io.github.echoman-dev.uninvertible-jetpack";
         private const string modName = "Lethal Company Uninvertible Jetpacks";
-        private const string modVersion = "0.0.1";
+        private const string modVersion = "0.0.2";
 
         private readonly Harmony harmony = new Harmony(modGUID);
         internal static ManualLogSource log;
