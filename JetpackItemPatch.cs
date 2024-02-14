@@ -14,10 +14,9 @@ namespace Uninvertible_Jetpack
 
         [HarmonyPrefix]
         [HarmonyPatch(nameof(JetpackItem.ItemActivate))]
-        public static void ItemActivate(ref JetpackItem __instance, bool __0, bool __1, ref bool ___jetpackActivatedPreviousFrame)
+        public static void ItemActivate(ref JetpackItem __instance, bool __0, bool __1)
         {
             __instance.isBeingUsed = __1;
-            ___jetpackActivatedPreviousFrame = !(__0&__1);
         }
     }
 }
